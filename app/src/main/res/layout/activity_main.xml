@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Custom View"
+            android:onClick="customViewFunction"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Static fragment"
+            android:onClick="fragmentFunction"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dynamic Fragment"
+            android:onClick="dynamicFragment"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FragmentList Adapter"
+            android:onClick="fragmentList"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Service"
+            android:onClick="service"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Database"
+            android:onClick="database"/>
+    <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Async"
+            android:onClick="async"
+            />
+</LinearLayout>
