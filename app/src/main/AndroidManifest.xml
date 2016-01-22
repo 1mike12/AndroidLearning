@@ -27,6 +27,10 @@
         <service android:name="service.BoundService"/>
         <activity android:name="database.DatabaseActivity"/>
         <activity android:name="database.LoaderActivity"/>
+
+        <activity android:name="activityResult.Master"/>
+        <activity android:name="activityResult.SlaveFirst"/>
+        <activity android:name="activityResult.SlaveSecond"/>
     </application>
 
 </manifest>

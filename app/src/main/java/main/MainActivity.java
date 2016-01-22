@@ -1,5 +1,6 @@
 package main;
 
+import activityResult.Master;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -66,6 +67,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void async (View v){
         launchIntent(AsyncTaskActivity.class);
+    }
+
+    public void activityResult(View v ){
+        launchIntent(Master.class);
     }
     public void launchIntent(Class<?> someClass) {
         Intent intent = new Intent(this, someClass);
