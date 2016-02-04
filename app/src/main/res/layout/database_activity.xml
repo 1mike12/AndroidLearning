@@ -6,6 +6,5 @@
 
     <TextView android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:id="@+id/database_activity_output"/>
-
+              android:id="@+id/loader_activity_output"/>
 </LinearLayout>

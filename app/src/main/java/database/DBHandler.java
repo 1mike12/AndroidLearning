@@ -79,4 +79,27 @@ public class DBHandler extends SQLiteOpenHelper {
         // return contact list
         return contactList;
     }
+
+    public List<Contact> getUsersWithNameLike(String query){
+        String selectQuery = "SELECT  * FROM " + TABLE_USERS + " WHERE name LIKE '" + query + "%'";
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery(selectQuery, null);
+
+        List<Contact> contactList = new ArrayList<>();
+        // looping through all rows and adding to list
+        if (cursor.moveToFirst()) {
+            do {
+                Contact contact = new Contact();
+                contact.setID(Integer.parseInt(cursor.getString(0)));
+                contact.setName(cursor.getString(1));
+                contact.setPhoneNumber(cursor.getString(2));
+                // Adding contact to list
+                contactList.add(contact);
+            } while (cursor.moveToNext());
+        }
+        cursor.close();
+        // return contact list
+        return contactList;
+    }
 }

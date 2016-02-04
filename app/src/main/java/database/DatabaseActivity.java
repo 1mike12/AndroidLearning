@@ -1,6 +1,5 @@
 package database;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.TextView;
@@ -42,7 +41,7 @@ public class DatabaseActivity extends BaseAppCompatActivity {
             Log.d("Name: ", output);
         }
 
-        TextView text = (TextView) findViewById(R.id.database_activity_output);
+        TextView text = (TextView) findViewById(R.id.loader_activity_output);
         text.setText(output);
     }
 }

@@ -18,7 +18,7 @@ public class Contact {
     int _id;
     String _name;
     String _email;
-    String phone_;
+    String _phone;
 
     public void setID(int id){
         _id = id;
@@ -29,7 +29,11 @@ public class Contact {
     }
 
     public void setPhoneNumber (String phone){
-        phone_ = phone;
+        _phone = phone;
+    }
+
+    public String toStringContact (){
+        return "name: " + _name + " email: " + _email + " phone: " + _phone;
     }
 }
 
