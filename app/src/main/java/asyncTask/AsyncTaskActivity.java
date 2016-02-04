@@ -31,7 +31,7 @@ public class AsyncTaskActivity extends BaseAppCompatActivity {
         button_.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AsyncTaskRunner runner = new AsyncTaskRunner();
+                MyAsyncTaskRunner runner = new MyAsyncTaskRunner();
                 try {
                     int ms = Integer.valueOf(editText_.getText().toString());
                     runner.execute(ms);
@@ -47,7 +47,7 @@ public class AsyncTaskActivity extends BaseAppCompatActivity {
 
     //<Input type, Progress type, Result Type>
     //<# ms to sleep, progress is a string "sleeping...", result is "Slept for" + ms>
-    private class AsyncTaskRunner extends AsyncTask<Integer, String, String> {
+    private class MyAsyncTaskRunner extends AsyncTask<Integer, String, String> {
 
         String resp;
 
