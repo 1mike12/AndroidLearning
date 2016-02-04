@@ -36,6 +36,13 @@
                 android:layout_height="wrap_content"
                 android:text="Database"
                 android:onClick="database"/>
+
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Loader"
+                android:onClick="loader"
+                />
+
         <Button android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Async"
@@ -47,6 +54,7 @@
                 android:text="Activity Result"
                 android:onClick="activityResult"
                 />
+
     </LinearLayout>
 
 </ScrollView>

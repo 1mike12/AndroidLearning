@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import asyncTask.AsyncTaskActivity;
 import database.DatabaseActivity;
+import database.LoaderActivity;
 import fragment.DynamicFragmentActivity;
 import fragment.StaticFragmentActivity;
 import fragmentList.MyListFragmentActivity;
@@ -65,6 +66,9 @@ public class MainActivity extends AppCompatActivity {
         launchIntent(DatabaseActivity.class);
     }
 
+    public void loader (View v){
+        launchIntent(LoaderActivity.class);
+    }
     public void async (View v){
         launchIntent(AsyncTaskActivity.class);
     }
