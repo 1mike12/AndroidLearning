@@ -55,6 +55,12 @@
                 android:onClick="activityResult"
                 />
 
+        <Button android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pager"
+                android:onClick="pager"
+                />
+
     </LinearLayout>
 
 </ScrollView>

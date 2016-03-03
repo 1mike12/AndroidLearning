@@ -15,6 +15,7 @@ import fragmentList.MyListFragmentActivity;
 import mike.customview.LovelyActivity;
 import mike.customview.LovelyView;
 import mike.customview.R;
+import pager.PagerActivity;
 import service.ServiceActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -75,6 +76,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void activityResult(View v ){
         launchIntent(Master.class);
+    }
+
+    public void pager(View v){
+        launchIntent(PagerActivity.class);
     }
     public void launchIntent(Class<?> someClass) {
         Intent intent = new Intent(this, someClass);
