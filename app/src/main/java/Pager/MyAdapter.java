@@ -1,5 +1,6 @@
 package pager;
 
+import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -11,10 +12,12 @@ import java.util.ArrayList;
  */
 public class MyAdapter extends FragmentPagerAdapter {
 
-    ArrayList<Fragment> fragments_;
-
-    public MyAdapter(FragmentManager fm) {
+    ArrayList<MyFragmentForPager> fragments_;
+    Context context_;
+    public MyAdapter(Context context, FragmentManager fm) {
         super(fm);
+        context_ = context;
+        fragments_ = new ArrayList<>();
         fragments_.add(new FirstPageFragment());
         fragments_.add(new SecondPageFragment());
     }
@@ -27,5 +30,11 @@ public class MyAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         return fragments_.size();
+    }
+
+    @Override
+    public CharSequence getPageTitle(int position) {
+        // Generate title based on item position
+        return fragments_.get(position).getTitle(context_);
     }
 }
