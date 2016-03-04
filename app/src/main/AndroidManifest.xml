@@ -8,7 +8,7 @@
             android:label="@string/app_name"
             android:theme="@style/AppTheme">
         <activity
-                android:name="main.MainActivity"
+                android:name=".main.MainActivity"
                 android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -17,23 +17,23 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="fragment.StaticFragmentActivity"/>
-        <activity android:name="fragment.DynamicFragmentActivity"/>
+        <activity android:name=".fragment.StaticFragmentActivity"/>
+        <activity android:name=".fragment.DynamicFragmentActivity"/>
         <activity android:name="mike.customview.LovelyActivity"/>
-        <activity android:name="fragmentList.MyListFragmentActivity"/>
-        <activity android:name="service.ServiceActivity"/>
-        <activity android:name="asyncTask.AsyncTaskActivity"/>
+        <activity android:name=".fragmentList.MyListFragmentActivity"/>
+        <activity android:name=".service.ServiceActivity"/>
+        <activity android:name=".asyncTask.AsyncTaskActivity"/>
 
-        <service android:name="service.BoundService"/>
-        <activity android:name="database.DatabaseActivity"/>
-        <activity android:name="database.LoaderActivity"/>
+        <service android:name=".service.BoundService"/>
+        <activity android:name=".database.DatabaseActivity"/>
+        <activity android:name=".database.LoaderActivity"/>
 
-        <activity android:name="activityResult.Master"/>
-        <activity android:name="activityResult.SlaveFirst"/>
-        <activity android:name="activityResult.SlaveSecond"/>
+        <activity android:name=".activityResult.Master"/>
+        <activity android:name=".activityResult.SlaveFirst"/>
+        <activity android:name=".activityResult.SlaveSecond"/>
 
-        <activity android:name="pager.PagerActivity"/>
-        <activity android:name="data_binding.DataBindingActivity"/>
+        <activity android:name=".pager.PagerActivity"/>
+        <activity android:name=".data_binding.DataBindingActivity"/>
     </application>
 
 </manifest>

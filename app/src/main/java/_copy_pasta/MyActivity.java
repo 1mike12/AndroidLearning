@@ -1,7 +1,7 @@
 package _copy_pasta;
 
 import android.os.Bundle;
-import main.BaseAppCompatActivity;
+import mike.customview.main.BaseAppCompatActivity;
 import mike.customview.R;
 
 /**
