@@ -3,63 +3,8 @@
             android:layout_width="match_parent">
     <LinearLayout android:orientation="vertical"
                   android:layout_width="match_parent"
-                  android:layout_height="match_parent">
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Custom View"
-                android:onClick="customViewFunction"/>
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Static fragment"
-                android:onClick="fragmentFunction"/>
-
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Dynamic Fragment"
-                android:onClick="dynamicFragment"/>
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="FragmentList Adapter"
-                android:onClick="fragmentList"/>
-
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Service"
-                android:onClick="service"/>
-        <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Database"
-                android:onClick="database"/>
-
-        <Button android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Loader"
-                android:onClick="loader"
-                />
-
-        <Button android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Async"
-                android:onClick="async"
-                />
-
-        <Button android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Activity Result"
-                android:onClick="activityResult"
-                />
-
-        <Button android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pager"
-                android:onClick="pager"
-                />
+                  android:layout_height="wrap_content"
+                  android:id="@+id/main_button_wrapper">
 
     </LinearLayout>
 

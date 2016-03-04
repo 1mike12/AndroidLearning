@@ -6,7 +6,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.LinearLayout;
 import asyncTask.AsyncTaskActivity;
+import data_binding.DataBindingActivity;
 import database.DatabaseActivity;
 import database.LoaderActivity;
 import fragment.DynamicFragmentActivity;
@@ -18,70 +21,50 @@ import mike.customview.R;
 import pager.PagerActivity;
 import service.ServiceActivity;
 
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity {
 
-    LovelyView myView;
+    static LinkedHashMap<String, Class> name_activity = new LinkedHashMap<>();
+
+    static {
+        name_activity.put("Lovely", LovelyActivity.class);
+        name_activity.put("fragment", StaticFragmentActivity.class);
+        name_activity.put("dynamic fragment", DynamicFragmentActivity.class);
+        name_activity.put("fragment list", MyListFragmentActivity.class);
+        name_activity.put("service", ServiceActivity.class);
+        name_activity.put("database", DatabaseActivity.class);
+        name_activity.put("loader", LoaderActivity.class);
+        name_activity.put("async", AsyncTaskActivity.class);
+        name_activity.put("Activity Result", Master.class);
+        name_activity.put("pager", PagerActivity.class);
+        name_activity.put("data binding", DataBindingActivity.class);
+    }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
+        LinearLayout buttonWrapper = (LinearLayout) findViewById(R.id.main_button_wrapper);
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        for (final Map.Entry<String, Class> entry : name_activity.entrySet()) {
+            Button button = new Button(this);
+            button.setText(entry.getKey());
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    launchIntent(entry.getValue());
+                }
+            });
+            buttonWrapper.addView(button);
         }
-
-        return super.onOptionsItemSelected(item);
     }
 
-    public void customViewFunction(View v) {
-        launchIntent(LovelyActivity.class);
-    }
 
-    public void fragmentFunction(View v) {
-        launchIntent(StaticFragmentActivity.class);
-    }
-
-    public void dynamicFragment(View v) {
-        launchIntent(DynamicFragmentActivity.class);
-    }
-
-    public void fragmentList(View view) {
-        launchIntent(MyListFragmentActivity.class);
-    }
-
-    public void service (View v){
-        launchIntent(ServiceActivity.class);
-    }
-
-    public void database (View v){
-        launchIntent(DatabaseActivity.class);
-    }
-
-    public void loader (View v){
-        launchIntent(LoaderActivity.class);
-    }
-    public void async (View v){
-        launchIntent(AsyncTaskActivity.class);
-    }
-
-    public void activityResult(View v ){
-        launchIntent(Master.class);
-    }
-
-    public void pager(View v){
-        launchIntent(PagerActivity.class);
-    }
-    public void launchIntent(Class<?> someClass) {
+    void launchIntent(Class<?> someClass) {
         Intent intent = new Intent(this, someClass);
         startActivity(intent);
     }
