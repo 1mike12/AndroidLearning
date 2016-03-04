@@ -1,4 +1,4 @@
-package pager;
+package data_binding;
 
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -7,9 +7,9 @@ import main.BaseAppCompatActivity;
 import mike.customview.R;
 
 /**
- * Created by mike on 3/3/16.
+ * Created by mike on 3/4/16.
  */
-public class PagerActivity extends BaseAppCompatActivity {
+public class DataBindingActivity extends BaseAppCompatActivity {
 
     FragAdapter adapter_;
 

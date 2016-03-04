@@ -33,6 +33,7 @@
         <activity android:name="activityResult.SlaveSecond"/>
 
         <activity android:name="pager.PagerActivity"/>
+        <activity android:name="data_binding.DataBindingActivity"/>
     </application>
 
 </manifest>

@@ -1,25 +1,28 @@
-package pager;
+package data_binding;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import pager.FirstPageFragment;
+import pager.MyFragmentForPager;
+import pager.SecondPageFragment;
 
 import java.util.ArrayList;
 
 /**
  * Created by mike on 3/3/16.
  */
-public class MyAdapter extends FragmentPagerAdapter {
-
+public class FragAdapter extends FragmentPagerAdapter {
     ArrayList<MyFragmentForPager> fragments_;
     Context context_;
-    public MyAdapter(Context context, FragmentManager fm) {
+
+    public FragAdapter(Context context, FragmentManager fm) {
         super(fm);
         context_ = context;
         fragments_ = new ArrayList<>();
-        fragments_.add(new FirstPageFragment());
-        fragments_.add(new SecondPageFragment());
+        fragments_.add(new BindingFrag1());
+        fragments_.add(new BindingFrag2());
     }
 
     @Override
